@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alura Typer</title>
+        <link rel="stylesheet" href="css/libs/materialize.min.css">
+        <link rel="stylesheet" href="css/libs/google-fonts.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="center">Alura Typer</h1>
+            <p class="phrase center">saddasdsa dasddsad saadssaddsa asdasdads.</p>
+            <ul class="info center">
+                <li>
+                    <i class="small material-icons info-icons">description</i>        
+                    <span id="phrase-words">20</span> words.
+                </li>
+                <li>
+                    <i class="small material-icons info-icons">query_builder</i>        
+                    <span id="typing-time">20</span> seconds.
+                </li>
+            </ul>
+
+            <textarea class="typing-field" rows="8" cols="40"></textarea>
+            <div class="reset-button">
+                <a id="reset-game" class="btn-floating btn-large waves-effect waves-light red">
+                    <i class="material-icons">restore</i>
+                </a>
+            </div>
+
+            <ul class="center">
+                <li><span id="characters-counter">0</span> characters.</li>
+                <li><span id="words-counter">0</span> words.</li>
+            </ul>
+
+            <section class="scoreboard">
+                <h3 class="center">Scoreboard</h3>
+                <table class="centered bordered">
+                    <thead>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Remove</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/scoreboard.js"></script>
+    </body>
+</html>

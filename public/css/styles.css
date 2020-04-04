@@ -1,0 +1,26 @@
+.typing-field {
+    font-size: 20px;
+    height:130px;
+    border: 3px solid black;
+}
+
+.field-correct {
+    border: 3px solid green;
+}
+
+.field-wrong {
+    border: 3px solid red;
+}
+
+.phrase {
+    font-size: 20px;
+    text-align: left;
+}
+
+.field-disabled {
+    background-color: lightgray;
+}
+
+.info-icon {
+    vertical-align: middle;
+}
