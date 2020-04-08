@@ -5,12 +5,19 @@
         <title>Alura Typer</title>
         <link rel="stylesheet" href="css/libs/materialize.min.css">
         <link rel="stylesheet" href="css/libs/google-fonts.css">
+        <link rel="stylesheet" href="css/libs/selectize.default.css">
+        <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css" />
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <div class="container">
             <h1 class="center">Alura Typer</h1>
-            <p class="phrase center">saddasdsa dasddsad saadssaddsa asdasdads.</p>
+            <p class="phrase center">Hakuna Matata What a wonderful phrase</p>
+            <div class="center">
+                <img src="img/spinner.gif" alt="Spinner" id="spinner">
+                <p id="error">An error occurred. Please try again!</p>
+            </div>
+            
             <ul class="info center">
                 <li>
                     <i class="small material-icons info-icons">description</i>        
@@ -18,14 +25,35 @@
                 </li>
                 <li>
                     <i class="small material-icons info-icons">query_builder</i>        
-                    <span id="typing-time">20</span> seconds.
+                    <span id="typing-time">10</span> seconds.
                 </li>
             </ul>
 
             <textarea class="typing-field" rows="8" cols="40"></textarea>
-            <div class="reset-button">
-                <a id="reset-game" class="btn-floating btn-large waves-effect waves-light red">
+            <div class="buttons">
+                <a id="reset-btn" class="btn-floating btn-large waves-effect waves-light red">
                     <i class="material-icons">restore</i>
+                </a>
+                <a id="scoreboard-btn" class="btn-floating btn-large waves-effect waves-light green">
+                    <i class="material-icons">assignment</i>
+                </a>
+                <a id="change-phrase-btn" class="btn-floating btn-large waves-effect waves-light blue">
+                    <i class="material-icons">shuffle</i>
+                </a>
+                <a id="phrase-id-btn" class="btn-floating btn-large waves-effect waves-light cyan">
+                    <i class="material-icons">repeat_one</i>
+                </a>
+                <input type="number" min="0" id="phrase-id">
+
+                <div class="select-user">
+                    <select id="users">
+                        <option value="Douglas">Douglas</option>
+                        <option value="Fernando">Fernando</option>
+                        <option value="Nico">Nico</option>
+                    </select>
+                </div>
+                <a id="sync-btn" class="tooltip btn-floating btn-large waves-effect waves-light yellow" title="Synchronized successfully">
+                    <i class="material-icons">swap_vert</i>
                 </a>
             </div>
 
@@ -49,7 +77,10 @@
             </section>
         </div>
         <script src="js/jquery.js"></script>
+        <script src="js/selectize.js"></script>
+        <script src="js/tooltipster.bundle.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/scoreboard.js"></script>
+        <script src="js/phrase.js"></script>
     </body>
 </html>

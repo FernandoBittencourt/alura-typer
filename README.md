@@ -1,4 +1,4 @@
 # Alura Typer Game
 Project developed in the JQuery course at Alura.
-The project is a typing game. 
+The project is a type racer like game. 
 Created only for the purpose of studying technologies.

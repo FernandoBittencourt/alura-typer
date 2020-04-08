@@ -6,8 +6,23 @@ $(function(){
     initializeCounters();
     startTimer();
     initializeBorders();
-    $("#reset-game").click(resetGame);
+    $("#reset-btn").click(resetGame);
+    updateScoreboard();
+
+    $("#users").selectize({
+        create: true,
+        sortField: 'text'
+    });
+
+    $(".tooltip").tooltipster({
+        trigger: "custom"
+    });
 });
+
+function updateStartTime(time) {
+    startTime=time;
+    $("#typing-time").text(time);
+}
 
 function updatePhrase() {
     var phrase = $(".phrase").text();
@@ -30,11 +45,24 @@ function initializeCounters() {
     });
 }
 
+function initializeBorders() {
+    typingField.on("input", function(){
+        var phrase = $(".phrase").text();
+        var typed = typingField.val();
+        var comparable = phrase.substring(0, typed.length)
+        if(typed == comparable) {
+            typingField.addClass("field-correct");
+            typingField.removeClass("field-wrong");
+        } else {
+            typingField.addClass("field-wrong");
+            typingField.removeClass("field-correct");
+        }
+    });
+}
+
 function startTimer () {
-    var timeLeft = $('#typing-time').text();
-    typingField.one("focus", function() {
-        $("#reset-game").attr("disabled", true);
-        
+    typingField.one("focus", function() { 
+        var timeLeft = $('#typing-time').text();       
         var timerId = setInterval(function(){
             timeLeft--;
             $('#typing-time').text(timeLeft);
@@ -47,26 +75,11 @@ function startTimer () {
 }
 
 function endGame(){
-    typingField.attr("disabled", true);
-    $("#reset-game").attr("disabled", false);  
+    typingField.attr("disabled", true); 
     typingField.toggleClass("field-disabled");
     insertScoreboard();
 }
 
-function initializeBorders() {
-    var phrase = $(".phrase").text();
-    typingField.on("input", function(){
-        var typed = typingField.val();
-        var comparable = phrase.substring(0, typed.length)
-        if(typed == comparable) {
-            typingField.addClass("field-correct");
-            typingField.removeClass("field-wrong");
-        } else {
-            typingField.addClass("field-wrong");
-            typingField.removeClass("field-correct");
-        }
-    });
-}
 
 
 function resetGame() {

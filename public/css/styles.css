@@ -24,3 +24,37 @@
 .info-icon {
     vertical-align: middle;
 }
+
+body {
+    overflow: scroll;
+}
+
+#error {
+    color: red;
+    display: none;
+}
+
+#spinner {
+    display: none;
+}
+
+#phrase-id {
+    width: 40px;
+}
+
+#sync-btn{
+    float: right;
+}
+
+.select-user {
+    display:inline-block;
+}
+
+#users {
+    display: block;
+}
+
+.selectize-input {
+    width: 150px;
+    vertical-align: middle;
+}
