@@ -7,8 +7,11 @@ Created only for the purpose of studying technologies.
 ## About the course
 JQuery: Master the most popular library on the market
 The course was splitted in two parts.
+
 About the Part 1 (Portuguese): https://cursos.alura.com.br/course/jquery-a-biblioteca-do-mercado
+
 About the Part 2 (Portuguese): https://cursos.alura.com.br/course/jquery-a-biblioteca-do-mercado-parte-2
+
 About Alura (Portuguese): https://www.alura.com.br/sobre
 
 
